@@ -42,7 +42,6 @@ return {
       -- "pyright"
       "eslint",
       "lua_ls",
-      "null_ls"
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields

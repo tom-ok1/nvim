@@ -23,10 +23,17 @@ return {
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
           ["<Leader>r"] = { "<cmd>AstroReload<cr>", desc = "Reload window" },
+          -- toggle term
+          -- https://github.dev/AstroNvim/AstroNvim > lua > astronvim > plugins > toggleterm.lua
+          ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
         },
         t = {
-          -- setting a mapping to false will disable it
-          -- ["<esc>"] = false,
+          -- toggle term
+          ["<C-'>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
+        },
+        i = {
+          -- toggle term
+          ["<C-'>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
         },
       },
     },

@@ -29,11 +29,12 @@ return {
         },
         t = {
           -- toggle term
-          ["<C-'>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
+          ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
+          ["<esc>"] = { "<C-\\><C-n>", desc = "escape when in terminal" },
         },
         i = {
           -- toggle term
-          ["<C-'>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
+          ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
         },
       },
     },

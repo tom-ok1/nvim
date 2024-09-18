@@ -26,6 +26,10 @@ return {
           -- toggle term
           -- https://github.dev/AstroNvim/AstroNvim > lua > astronvim > plugins > toggleterm.lua
           ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
+          ["<Leader>fl"] = {
+            function() require("telescope").extensions.live_grep_args.live_grep_args() end,
+            desc = "Live grep args",
+          },
         },
         t = {
           -- toggle term

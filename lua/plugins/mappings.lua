@@ -34,7 +34,7 @@ return {
         t = {
           -- toggle term
           ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
-          ["<esc>"] = { "<C-\\><C-n>", desc = "escape when in terminal" },
+          ["<C-q>"] = { "<C-\\><C-n>", desc = "escape when in terminal" },
         },
         i = {
           -- toggle term
@@ -42,6 +42,23 @@ return {
         },
       },
     },
+  },
+  -- to disable tsserver formatting
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      local lspconfig = require "lspconfig"
+      require("mason-lspconfig").setup_handlers {
+        tsserver = function()
+          lspconfig.tsserver.setup {
+            on_attach = function(client, bufnr)
+              client.server_capabilities.documentFormattingProvider = false
+              client.server_capabilities.documentRangeFormattingProvider = false
+            end,
+          }
+        end,
+      }
+    end,
   },
   {
     "AstroNvim/astrolsp",

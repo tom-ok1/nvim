@@ -9,11 +9,6 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
-        "prettier",
-        "tsserver",
-        "jsonlsp",
-        "yaml-language-server",
-        "tailwindcss",
         -- add more arguments for adding more language servers
       },
     },
@@ -28,9 +23,7 @@ return {
         -- add more arguments for adding more null-ls sources
       },
       handlers = {
-        ["lua"] = function()
-          return require("null-ls").builtins.formatting.stylua
-        end,
+        ["lua"] = function() return require("null-ls").builtins.formatting.stylua end,
       },
     },
   },

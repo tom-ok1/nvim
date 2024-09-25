@@ -43,23 +43,6 @@ return {
       },
     },
   },
-  -- to disable tsserver formatting
-  {
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      local lspconfig = require "lspconfig"
-      require("mason-lspconfig").setup_handlers {
-        tsserver = function()
-          lspconfig.tsserver.setup {
-            on_attach = function(client, bufnr)
-              client.server_capabilities.documentFormattingProvider = false
-              client.server_capabilities.documentRangeFormattingProvider = false
-            end,
-          }
-        end,
-      }
-    end,
-  },
   {
     "AstroNvim/astrolsp",
     ---@type AstroLSPOpts

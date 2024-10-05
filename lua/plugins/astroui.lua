@@ -14,7 +14,7 @@ return {
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal
-        Normal = { bg = "none", fg = "#FFFFFF" },
+        Normal = { bg = "none", fg = "#F2F3F5" },
         SignColumn = { bg = "none" },
         FoldColumn = { bg = "none" },
         NormalFloat = { bg = "none" },
@@ -41,10 +41,10 @@ return {
         NeoTreeNormal = { bg = "none" },
         NeoTreeNormalNC = { bg = "none" },
         NeoTreeTabInactive = { bg = "none" },
-        NeoTreeTabSeperatorActive = { fg = "#F2F3F5", bg = "none" },
-        NeoTreeTabSeperatorInactive = { fg = "#F2F3F5", bg = "none" },
-        NvimTreeTabSeperatorActive = { fg = "#F2F3F5", bg = "none" },
-        NvimTreeTabSeperatorInactive = { fg = "#F2F3F5", bg = "none" },
+        NeoTreeTabSeparatorActive = { fg = "#F2F3F5", bg = "none" },
+        NeoTreeTabSeparatorInactive = { fg = "#F2F3F5", bg = "none" },
+        NvimTreeTabSeparatorActive = { fg = "#F2F3F5", bg = "none" },
+        NvimTreeTabSeparatorInactive = { fg = "#F2F3F5", bg = "none" },
         MiniTabLineFill = { fg = "#F2F3F5", bg = "none" },
         -- Spectre
         DiffChange = { fg = "#F2F3F5", bg = "#050a30" },
@@ -65,9 +65,6 @@ return {
         CursorLineNr = { bg = "none" },
         CursorLine = { bg = "none" },
         ColorColumn = { bg = "none" },
-        -- Search
-        Search = { fg = "red" },
-        IncSearch = { fg = "red" },
         -- Pmenu
         Pmenu = { bg = "none" },
         PmenuSel = { bg = "none" },

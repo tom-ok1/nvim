@@ -13,7 +13,11 @@ return {
 
     -- first setup telescope
     telescope.setup {
-      -- your config
+      extensions = {
+        live_grep_args = {
+          auto_quoting = false,
+        },
+      },
     }
 
     -- then load the extension

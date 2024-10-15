@@ -9,4 +9,5 @@ return {
   -- import/override with your plugins folder
   { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
 }

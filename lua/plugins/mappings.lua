@@ -44,6 +44,8 @@ return {
         i = {
           -- toggle term
           ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
+          ["<C-e>"] = { "<End>" },
+          ["<C-a>"] = { "<Home>" },
         },
       },
     },

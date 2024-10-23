@@ -1,3 +1,1 @@
-# AstroNvim Template
-
-My template
+# Neovim config

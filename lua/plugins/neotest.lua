@@ -2,7 +2,7 @@ return {
   { "nvim-neotest/nvim-nio" },
   {
     "nvim-neotest/neotest",
-    dependencies = { "nvim-neotest/nvim-nio", "nvim-neotest/neotest-jest" },
+    dependencies = { "nvim-neotest/nvim-nio", "nvim-neotest/neotest-jest", "rouge8/neotest-rust" },
     opts = {
       -- Can be a list of adapters like what neotest expects,
       -- or a list of adapter names,
@@ -16,6 +16,7 @@ return {
           env = { CI = true },
           cwd = function(path) return vim.fn.getcwd() end,
         },
+        ["neotest-rust"] = {},
       },
       -- Example for loading neotest-golang with a custom config
       -- adapters = {

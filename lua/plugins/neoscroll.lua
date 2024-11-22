@@ -3,11 +3,15 @@ return {
   config = function()
     local neoscroll = require "neoscroll"
     neoscroll.setup()
+    local function execute_default_command(key)
+      local feedkeys = vim.api.nvim_replace_termcodes(key, true, false, true)
+      vim.api.nvim_feedkeys(feedkeys, "n", false)
+    end
     local keymap = {
-      ["<C-u>"] = function() neoscroll.ctrl_u { duration = 50 } end,
-      ["<C-d>"] = function() neoscroll.ctrl_d { duration = 50 } end,
-      ["<C-b>"] = function() neoscroll.ctrl_b { duration = 50 } end,
-      ["<C-f>"] = function() neoscroll.ctrl_f { duration = 50 } end,
+      ["<C-u>"] = function() execute_default_command "<C-u>" end,
+      ["<C-d>"] = function() execute_default_command "<C-d>" end,
+      ["<C-b>"] = function() execute_default_command "<C-b>" end,
+      ["<C-f>"] = function() execute_default_command "<C-f>" end,
       ["<C-y>"] = function() neoscroll.scroll(-0.1, { move_cursor = false, duration = 50 }) end,
       ["<C-e>"] = function() neoscroll.scroll(0.1, { move_cursor = false, duration = 50 }) end,
       ["zt"] = function() neoscroll.zt { half_win_duration = 50 } end,

@@ -22,7 +22,7 @@ return {
           ["<Leader>b"] = { name = "Buffers" },
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-          ["<Leader>r"] = { "<cmd>AstroReload<cr>", desc = "Reload window" },
+          -- ["<Leader>r"] = { "<cmd>AstroReload<cr>", desc = "Reload window" },
           -- toggle term
           -- https://github.dev/AstroNvim/AstroNvim > lua > astronvim > plugins > toggleterm.lua
           ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
@@ -44,6 +44,11 @@ return {
           -- move buffer
           ["H"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end },
           ["L"] = { function() require("astrocore.buffer").nav(vim.v.count1) end },
+
+          ["<Leader>rk"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
+          ["<Leader>rj"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
+          ["<Leader>rh"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
+          ["<Leader>rl"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
         },
         t = {
           -- toggle term

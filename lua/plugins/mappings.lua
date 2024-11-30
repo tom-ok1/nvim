@@ -35,6 +35,11 @@ return {
             function() require("telescope").extensions.live_grep_args.live_grep_args() end,
             desc = "Live grep args",
           },
+
+          -- Copilot chat
+          ["<Leader>ao"] = { "<Cmd>lua require('CopilotChat').open()<CR>", desc = "open copilot chat" },
+          ["<Leader>at"] = { "<Cmd>lua require('CopilotChat').toggle()<CR>", desc = "toggle copilot chat" },
+          ["<Leader>ac"] = { "<Cmd>lua require('CopilotChat').close()<CR>", desc = "stop copilot chat" },
         },
         t = {
           -- toggle term
@@ -46,10 +51,6 @@ return {
           ["<C-'>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
           ["<C-e>"] = { "<End>" },
           ["<C-a>"] = { "<Home>" },
-          ["<C-h>"] = { "<Left>" },
-          ["<C-j>"] = { "<Down>" },
-          ["<C-k>"] = { "<Up>" },
-          ["<C-l>"] = { "<Right>" },
         },
       },
     },

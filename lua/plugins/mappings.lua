@@ -40,6 +40,10 @@ return {
           ["<Leader>ao"] = { "<Cmd>lua require('CopilotChat').open()<CR>", desc = "open copilot chat" },
           ["<Leader>at"] = { "<Cmd>lua require('CopilotChat').toggle()<CR>", desc = "toggle copilot chat" },
           ["<Leader>ac"] = { "<Cmd>lua require('CopilotChat').close()<CR>", desc = "stop copilot chat" },
+
+          -- move buffer
+          ["H"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end },
+          ["L"] = { function() require("astrocore.buffer").nav(vim.v.count1) end },
         },
         t = {
           -- toggle term
